@@ -1,0 +1,97 @@
+.signupContainer {
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
+.signupWrapper {
+  background-color: rgba(119, 119, 119, 0.2);
+  border: 1px solid #cccccc;
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+.signupWrapper > .signupForm {
+  color: #cccccc;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.875rem;
+}
+.signupForm > .alreadyUser {
+  margin-top: 68px;
+}
+.signupForm > .alreadyUser > a {
+  color: #cccccc;
+  font-size: 1rem;
+}
+.signupForm > h1 {
+  font-weight: 400;
+  font-size: 1.7rem;
+  margin-bottom: 14px;
+}
+.signupForm > .formGroup {
+  width: 100%;
+  margin-bottom: 24px;
+  margin-top: 12px;
+}
+.signupForm > .formGroup > label {
+  margin-bottom: 14px;
+  display: block;
+}
+.signupForm > .formGroup > input {
+  width: 90%;
+  height: 38px;
+  border: 1px solid #cccccc;
+  background: transparent;
+  padding: 0 0.75rem;
+  color: #cccccc;
+}
+.signupForm > .formGroup > input:focus {
+  background: #cccccc;
+  outline: none;
+  color: #333333;
+}
+.signupForm > p {
+  color: red;
+  margin-bottom: 12px;
+}
+.signupForm > .formGroup > input:invalid {
+  border: 1px solid red;
+  background-color: pink;
+  color: red;
+}
+.signupForm input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+.signupForm > .formGroup > .checkboxLabel {
+  display: inline-block;
+  font-size: 0.875rem;
+  vertical-align: middle;
+  margin-left: 0.3rem;
+}
+.signupForm > .formGroup input[type="button"] {
+  background: #cccccc;
+  font-size: 1.2rem;
+  width: 95%;
+  cursor: pointer;
+  color: #333333;
+  text-transform: capitalize;
+}
+.signupForm > .googleLogin > .google-icon {
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-left: 0.75rem;
+  border: 2px solid #cccccc;
+  border-radius: 90px;
+  padding: 0.5rem 0.75rem;
+}
+.signupForm > .googleLogin > span {
+  vertical-align: super;
+}

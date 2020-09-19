@@ -1,0 +1,194 @@
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+  
+::-webkit-scrollbar {
+    width: 2px;
+    background-color: #F5F5F5;
+  }
+  
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: var(--primary-color);
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+:root{
+    --primary-color: #cccccc;
+    --table-row-even: rgba(119,119,119,0.2);
+    --display-flex: flex;
+    --display-grid: grid;
+}
+
+.container{
+    display: var(--display-grid);
+    grid-template-columns: 30% 70%;
+    background:#000000;
+    padding: 0.875rem;
+}
+.container > .header{
+    height: 50px;
+    display: var(--display-flex);
+    justify-content: space-between;
+    border-bottom: 1px solid var(--primary-color);
+    margin-left: 0.75rem;
+    color: var(--primary-color);
+    align-items: center;
+}
+.header > p{
+    font-size: 1.5rem;
+}
+.container > .header > .logout{
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 2rem;
+}
+.container > .aside{
+    grid-row: 1 / span 2;
+    background-color: #0C0A0A;
+    color: #ededed;
+    padding: 1rem;
+    border: 1px solid var(--primary-color);
+    
+}
+.container > .aside > h1{
+    font-size: 1.3rem;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 400;;
+}
+.container > .aside > dl{
+    padding: 0.875rem;
+    display: var(--display-flex);
+    align-items: center;
+    flex-direction: column;
+    
+}
+.aside .dl-group{
+    height: 100px;
+    width: 70%;
+    padding: 0.875rem;
+    display: var(--display-flex);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.aside > dl dt{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.aside > dl .total,
+.aside > dl .total + dd{
+    color: orange;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.aside .dl-group.total{
+    border: 1px solid orange;
+}
+.aside .dl-group.total:hover{
+    background-color: rgba(255,153,51,0.1);
+}
+.aside .dl-group.recovered:hover{
+    background-color: rgba(0,102,0,0.1)
+}
+.aside .dl-group.deaths:hover{
+    background-color: rgba(255,51,51,0.1)
+}
+.aside .dl-group.active:hover{
+    background-color:rgba(102,102,204,0.1)
+}
+.aside > dl .active,
+.aside > dl .active + dd{
+    color: slateblue;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.aside .dl-group.active{
+    border: 1px solid slateblue;
+}
+.aside > dl .recovered,
+.aside > dl .recovered + dd{
+    color: green;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.aside .dl-group.recovered{
+    border: 1px solid green;
+}
+.aside .dl-group.deaths{
+    border: 1px solid red;
+}
+.aside > dl .deaths,
+.aside > dl .deaths + dd{
+    color: red;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.aside hgroup.newest{
+    text-align: right;
+    color: lightblue;
+}
+hgroup.newest h2,
+hgroup.newest h3{
+    font-weight: 400;
+}
+hgroup.newest h2{
+    font-size: 1.3rem;
+}
+.section{
+    color: var(--primary-color);
+    display: var(--display-flex);
+    align-items: flex-start;
+    padding: 0.875rem;
+}
+.section table{
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    border-collapse: collapse;
+}
+.section table caption{
+    font-size: 1.3rem;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.section table tbody{
+    max-height: 550px;
+    overflow-y: auto;
+    display: block;
+    width: 100%;
+    overflow-x: hidden;
+}
+.section table tbody tr:nth-child(2n){
+    background-color: var(--table-row-even);
+}
+.section table thead tr,
+.section table tbody tr{
+    height: 30px;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.section table thead th{
+    padding: 0.75rem;
+}
+.section table tbody td{
+    padding: 0.5rem;
+}
+.section table thead th,
+.section table tbody td
+{
+    text-align: left;
+    border: 1px solid var(--primary-color);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
